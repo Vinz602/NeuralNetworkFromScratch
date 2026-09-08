@@ -55,22 +55,17 @@ Trained for 2000 epochs with plain gradient descent (`lr=0.5`):
 | 1000 | 0.028 | 0.997 |
 | 2000 | 0.015 | 0.997 |
 
-![Dataset and decision boundary](moons_visualization.png)
-
 The learned decision boundary is **piecewise linear** — a direct fingerprint of ReLU. Each hidden unit contributes one linear "fold"; with only 4 hidden units, the boundary is a few straight segments stitched together rather than a smooth curve. Increasing `hidden_dim` produces a finer piecewise-linear approximation of the true curved boundary.
 
 ## Files
 
 - `nn_from_scratch.py` — network definition, training loop, and toy dataset generator
-- `visualize.py` — plots the dataset and the learned decision boundary
-- `moons_visualization.png` — output of `visualize.py`
 
 ## Usage
 
 ```bash
 pip install numpy matplotlib
 python nn_from_scratch.py   # trains and prints loss/accuracy per epoch
-python visualize.py         # trains and saves moons_visualization.png
 ```
 
 ## Key implementation notes
